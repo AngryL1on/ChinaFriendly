@@ -1,6 +1,7 @@
 package ru.rutmiit.chinafriendly.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -32,3 +33,12 @@ val Typography = Typography(
     )
     */
 )
+
+val RegularTextStyle = TextStyle(
+    fontWeight = FontWeight.Normal,
+    platformStyle = PlatformTextStyle(
+        includeFontPadding = false
+    )
+)
+
+val RegularText20 = RegularTextStyle.copy(fontSize = 20.sp)
