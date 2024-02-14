@@ -14,6 +14,8 @@ data class Dimensions(
     val verticalTiny: Dp = 10.dp,
     val horizontalXTiny: Dp = 5.dp,
     val defaultBorderWidth: Dp = 1.dp,
+    val defaultButtonHeight: Dp = 65.dp,
+    val defaultCornerRadius: Dp = 10.dp,
     val defaultToolbarSize: Dp = 50.dp,
 )
 

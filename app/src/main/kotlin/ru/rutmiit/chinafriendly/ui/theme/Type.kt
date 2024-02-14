@@ -36,6 +36,7 @@ val Typography = Typography(
 
 val RegularTextStyle = TextStyle(
     fontWeight = FontWeight.Normal,
+    lineHeight = 25.sp,
     platformStyle = PlatformTextStyle(
         includeFontPadding = false
     )
