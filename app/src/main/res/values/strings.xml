@@ -1,3 +1,9 @@
 <resources>
+    <!-- Drawer Items -->
     <string name="app_name">China Friendly</string>
+    <string name="home_item">Home</string>
+    <string name="tests_item">Tests</string>
+    <string name="contents_item">Contents</string>
+    <string name="translator_item">Translator</string>
+    <string name="currency_exchange_item">Currency Exchange</string>
 </resources>

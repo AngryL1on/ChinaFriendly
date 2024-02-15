@@ -36,10 +36,16 @@ val Typography = Typography(
 
 val RegularTextStyle = TextStyle(
     fontWeight = FontWeight.Normal,
-    lineHeight = 25.sp,
     platformStyle = PlatformTextStyle(
         includeFontPadding = false
     )
 )
 
-val RegularText20 = RegularTextStyle.copy(fontSize = 20.sp)
+val RegularText18 = RegularTextStyle.copy(
+    fontSize = 18.sp,
+    lineHeight = 23.sp,
+)
+val RegularText20 = RegularTextStyle.copy(
+    fontSize = 20.sp,
+    lineHeight = 25.sp,
+)
