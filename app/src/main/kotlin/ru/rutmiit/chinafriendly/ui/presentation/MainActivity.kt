@@ -96,7 +96,7 @@ class MainActivity : ComponentActivity() {
                                 color = YellowPrimary
                             ) {
                                 NavHost(navController, startDestination = "home") {
-                                    composable("home") { HomeScreen() }
+                                    composable("home") { HomeScreen(navController) }
                                     composable("tests") { TestsScreen() }
                                     composable("contents") { ContentsScreen() }
                                     composable("translator") { TranslatorScreen() }
