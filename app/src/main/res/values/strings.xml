@@ -6,4 +6,5 @@
     <string name="contents_item">Contents</string>
     <string name="translator_item">Translator</string>
     <string name="currency_exchange_item">Currency Exchange</string>
+    <string name="theme_not_found">Theme not found</string>
 </resources>

@@ -5,6 +5,7 @@ import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
@@ -41,6 +42,15 @@ val RegularTextStyle = TextStyle(
     )
 )
 
+val RegularText12 = RegularTextStyle.copy(
+    fontSize = 12.sp,
+    lineHeight = 17.sp,
+)
+val RegularText16 = RegularTextStyle.copy(
+    fontSize = 16.sp,
+    textAlign = TextAlign.Center,
+    lineHeight = 21.sp,
+)
 val RegularText18 = RegularTextStyle.copy(
     fontSize = 18.sp,
     lineHeight = 23.sp,

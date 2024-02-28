@@ -2,9 +2,7 @@ package ru.rutmiit.chinafriendly.ui.presentation.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -25,7 +23,6 @@ fun HomeScreen(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(dimensions.verticalTiny)
     ) {
-        Spacer(modifier = Modifier.height(dimensions.verticalTiny))
         PrimaryButton(
             textButton = "Contents",
             iconLeft = R.drawable.ic_contents,
