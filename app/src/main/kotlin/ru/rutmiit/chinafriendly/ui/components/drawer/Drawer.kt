@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
@@ -21,8 +22,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.components.models.DrawerMenuItem
+import ru.rutmiit.chinafriendly.ui.theme.ChinaFriendlyTheme
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 
 @Composable
 fun Drawer(
@@ -33,13 +34,13 @@ fun Drawer(
     modifier: Modifier = Modifier,
 ) {
 
-    var selected by rememberSaveable { mutableIntStateOf(0) }
+    val selected by rememberSaveable { mutableIntStateOf(0) }
 
     val dimensions = LocalDimensions.current
 
     ModalDrawerSheet(
         modifier = modifier,
-        drawerContainerColor = AdditionalRed,
+        drawerContainerColor = MaterialTheme.colorScheme.primary,
         drawerShape = RectangleShape
     ) {
         Spacer(modifier = Modifier.height(dimensions.verticalLarge))
@@ -74,10 +75,12 @@ fun DrawerPreview() {
         )
     )
 
-    Drawer(
-        items = drawerItems,
-        navController = rememberNavController(),
-        scope = rememberCoroutineScope(),
-        drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-    )
+    ChinaFriendlyTheme {
+        Drawer(
+            items = drawerItems,
+            navController = rememberNavController(),
+            scope = rememberCoroutineScope(),
+            drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+        )
+    }
 }

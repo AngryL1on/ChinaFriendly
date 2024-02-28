@@ -4,13 +4,13 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import ru.rutmiit.chinafriendly.R
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun ToolBarButton(
@@ -26,7 +26,7 @@ fun ToolBarButton(
             modifier = Modifier.fillMaxSize(),
             imageVector = ImageVector.vectorResource(id = icon),
             contentDescription = null,
-            tint = AdditionalYellow
+            tint = MaterialTheme.colorScheme.onPrimary
         )
     }
 }

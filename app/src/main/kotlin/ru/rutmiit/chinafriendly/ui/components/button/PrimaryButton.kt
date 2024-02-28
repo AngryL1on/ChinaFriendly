@@ -12,6 +12,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,10 +21,9 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.rutmiit.chinafriendly.R
+import ru.rutmiit.chinafriendly.ui.theme.ChinaFriendlyTheme
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 import ru.rutmiit.chinafriendly.ui.theme.RegularText20
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun PrimaryButton(
@@ -40,8 +40,8 @@ fun PrimaryButton(
             .fillMaxWidth(),
         shape = RoundedCornerShape(dimensions.defaultCornerRadius),
         colors = ButtonDefaults.buttonColors(
-            containerColor = AdditionalRed,
-            contentColor = AdditionalYellow
+            containerColor = MaterialTheme.colorScheme.primary,
+            contentColor = MaterialTheme.colorScheme.onPrimary
         ),
         onClick = onButtonClick
     ) {
@@ -63,20 +63,22 @@ fun PrimaryButton(
 @Composable
 @Preview
 fun PrimaryButtonPreview() {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(10.dp)
-    ){
-        PrimaryButton(
-            textButton = "Menu",
-            iconLeft = R.drawable.ic_menu,
-            onButtonClick = { /* Do nothing */ }
-        )
+    ChinaFriendlyTheme {
+        Column(
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            PrimaryButton(
+                textButton = "Menu",
+                iconLeft = R.drawable.ic_menu,
+                onButtonClick = { /* Do nothing */ }
+            )
 
-        PrimaryButton(
-            modifier = Modifier.width(150.dp),
-            textButton = "Menu",
-            iconLeft = R.drawable.ic_menu,
-            onButtonClick = { /* Do nothing */ }
-        )
+            PrimaryButton(
+                modifier = Modifier.width(150.dp),
+                textButton = "Menu",
+                iconLeft = R.drawable.ic_menu,
+                onButtonClick = { /* Do nothing */ }
+            )
+        }
     }
 }

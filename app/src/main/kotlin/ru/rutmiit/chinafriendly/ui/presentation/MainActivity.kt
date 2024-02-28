@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
@@ -27,7 +28,6 @@ import ru.rutmiit.chinafriendly.ui.presentation.screens.TestsScreen
 import ru.rutmiit.chinafriendly.ui.presentation.screens.TranslatorScreen
 import ru.rutmiit.chinafriendly.ui.theme.ChinaFriendlyTheme
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                                 onLeftIconClick = { scope.launch { drawerState.open() } }
                             )
                         },
-                        containerColor = AdditionalYellow,
+                        containerColor = MaterialTheme.colorScheme.surface,
                         content = { paddings ->
                             Surface(
                                 modifier = Modifier
@@ -93,7 +93,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(paddings) // This padding is provided by Scaffold and is commonly used to pad AppBar and other UI elements
                                     .padding(horizontal = dimensions.horizontalTiny)
                                 ,
-                                color = AdditionalYellow
+                                color = MaterialTheme.colorScheme.surface
                             ) {
                                 NavHost(navController, startDestination = "home") {
                                     composable("home") { HomeScreen(navController) }

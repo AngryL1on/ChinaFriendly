@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -16,10 +17,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ru.rutmiit.chinafriendly.R
+import ru.rutmiit.chinafriendly.ui.theme.ChinaFriendlyTheme
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 import ru.rutmiit.chinafriendly.ui.theme.RegularText20
-import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,8 +40,8 @@ fun ToolBar(
             right = dimensions.horizontalXTiny
         ),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = AdditionalRed,
-            navigationIconContentColor = AdditionalYellow
+            containerColor = MaterialTheme.colorScheme.primary,
+            navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
         ),
         title = {
             Row(
@@ -51,7 +51,7 @@ fun ToolBar(
                 Text(
                     modifier = Modifier,
                     text = textToolBar,
-                    style = RegularText20.copy(color = AdditionalYellow)
+                    style = RegularText20.copy(color = MaterialTheme.colorScheme.onPrimary)
                 )
             }
         },
@@ -72,12 +72,16 @@ fun ToolBar(
 @Composable
 @Preview(showBackground = true)
 fun ToolBarPreview() {
-    Column {
-        ToolBar(
-            modifier = Modifier,
-            textToolBar = "China Friendly",
-            iconLeft = R.drawable.ic_menu,
-            onLeftIconClick = { /* Do nothing */ }
-        )
+    ChinaFriendlyTheme {
+        MaterialTheme {
+            Column {
+                ToolBar(
+                    modifier = Modifier,
+                    textToolBar = "China Friendly",
+                    iconLeft = R.drawable.ic_menu,
+                    onLeftIconClick = { /* Do nothing */ }
+                )
+            }
+        }
     }
 }
