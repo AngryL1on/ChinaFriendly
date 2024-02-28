@@ -13,9 +13,9 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.RedPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 import ru.rutmiit.chinafriendly.ui.theme.RegularText18
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun DrawerItem(
@@ -43,12 +43,12 @@ fun DrawerItem(
         },
         shape = RoundedCornerShape(dimensions.defaultCornerRadius),
         colors = NavigationDrawerItemDefaults.colors(
-            selectedContainerColor = RedPrimary,
-            unselectedContainerColor = RedPrimary,
-            selectedTextColor = YellowPrimary,
-            unselectedTextColor = YellowPrimary,
-            selectedIconColor = YellowPrimary,
-            unselectedIconColor = YellowPrimary
+            selectedContainerColor = AdditionalRed,
+            unselectedContainerColor = AdditionalRed,
+            selectedTextColor = AdditionalYellow,
+            unselectedTextColor = AdditionalYellow,
+            selectedIconColor = AdditionalYellow,
+            unselectedIconColor = AdditionalYellow
         ),
         selected = selected,
         onClick = onItemClick,

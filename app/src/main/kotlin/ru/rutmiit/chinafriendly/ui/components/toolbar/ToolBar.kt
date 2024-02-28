@@ -17,9 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.RedPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 import ru.rutmiit.chinafriendly.ui.theme.RegularText20
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,8 +40,8 @@ fun ToolBar(
             right = dimensions.horizontalXTiny
         ),
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = RedPrimary,
-            navigationIconContentColor = YellowPrimary
+            containerColor = AdditionalRed,
+            navigationIconContentColor = AdditionalYellow
         ),
         title = {
             Row(
@@ -51,7 +51,7 @@ fun ToolBar(
                 Text(
                     modifier = Modifier,
                     text = textToolBar,
-                    style = RegularText20.copy(color = YellowPrimary)
+                    style = RegularText20.copy(color = AdditionalYellow)
                 )
             }
         },

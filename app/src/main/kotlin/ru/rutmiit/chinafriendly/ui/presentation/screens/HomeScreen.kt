@@ -14,7 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.components.button.PrimaryButton
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun HomeScreen(
@@ -25,7 +25,7 @@ fun HomeScreen(
 
     Surface(
         modifier = Modifier.fillMaxSize(),
-        color = YellowPrimary
+        color = AdditionalYellow
     ) {
         Column(
             modifier = modifier,

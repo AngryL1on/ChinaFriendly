@@ -21,9 +21,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.RedPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 import ru.rutmiit.chinafriendly.ui.theme.RegularText20
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun PrimaryButton(
@@ -40,8 +40,8 @@ fun PrimaryButton(
             .fillMaxWidth(),
         shape = RoundedCornerShape(dimensions.defaultCornerRadius),
         colors = ButtonDefaults.buttonColors(
-            containerColor = RedPrimary,
-            contentColor = YellowPrimary
+            containerColor = AdditionalRed,
+            contentColor = AdditionalYellow
         ),
         onClick = onButtonClick
     ) {

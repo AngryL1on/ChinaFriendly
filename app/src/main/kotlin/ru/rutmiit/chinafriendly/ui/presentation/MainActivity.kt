@@ -27,7 +27,7 @@ import ru.rutmiit.chinafriendly.ui.presentation.screens.TestsScreen
 import ru.rutmiit.chinafriendly.ui.presentation.screens.TranslatorScreen
 import ru.rutmiit.chinafriendly.ui.theme.ChinaFriendlyTheme
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                                 onLeftIconClick = { scope.launch { drawerState.open() } }
                             )
                         },
-                        containerColor = YellowPrimary,
+                        containerColor = AdditionalYellow,
                         content = { paddings ->
                             Surface(
                                 modifier = Modifier
@@ -93,7 +93,7 @@ class MainActivity : ComponentActivity() {
                                     .padding(paddings) // This padding is provided by Scaffold and is commonly used to pad AppBar and other UI elements
                                     .padding(horizontal = dimensions.horizontalTiny)
                                 ,
-                                color = YellowPrimary
+                                color = AdditionalYellow
                             ) {
                                 NavHost(navController, startDestination = "home") {
                                     composable("home") { HomeScreen(navController) }

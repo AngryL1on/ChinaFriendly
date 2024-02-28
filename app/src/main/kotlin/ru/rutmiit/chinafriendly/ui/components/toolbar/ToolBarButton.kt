@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import ru.rutmiit.chinafriendly.R
-import ru.rutmiit.chinafriendly.ui.theme.YellowPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalYellow
 
 @Composable
 fun ToolBarButton(
@@ -26,7 +26,7 @@ fun ToolBarButton(
             modifier = Modifier.fillMaxSize(),
             imageVector = ImageVector.vectorResource(id = icon),
             contentDescription = null,
-            tint = YellowPrimary
+            tint = AdditionalYellow
         )
     }
 }

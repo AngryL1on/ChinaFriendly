@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 import ru.rutmiit.chinafriendly.R
 import ru.rutmiit.chinafriendly.ui.components.models.DrawerMenuItem
 import ru.rutmiit.chinafriendly.ui.theme.LocalDimensions
-import ru.rutmiit.chinafriendly.ui.theme.RedPrimary
+import ru.rutmiit.chinafriendly.ui.theme.AdditionalRed
 
 @Composable
 fun Drawer(
@@ -39,7 +39,7 @@ fun Drawer(
 
     ModalDrawerSheet(
         modifier = modifier,
-        drawerContainerColor = RedPrimary,
+        drawerContainerColor = AdditionalRed,
         drawerShape = RectangleShape
     ) {
         Spacer(modifier = Modifier.height(dimensions.verticalLarge))
